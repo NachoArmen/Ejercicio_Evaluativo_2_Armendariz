@@ -16,11 +16,15 @@ c2 = Cine(2,"Cinemark", "Palermo 654")
 c3 = Cine(3,"Hoyts", "Unicenter 123")
 
 p1 = Pelicula("Toy Story", 90, "Animación")
-db.agregar_pelicula(p1.titulo, p1.duracion, p1.genero)
-
 p2 = Pelicula("Avatar", 120, "Ciencia Ficción")
+
+db.agregar_pelicula(p1.titulo, p1.duracion, p1.genero)
 db.agregar_pelicula(p2.titulo, p2.duracion, p2.genero)
 
+
+c1.agregar_pelicula(p1)
+c2.agregar_pelicula(p1)
+c3.agregar_pelicula(p1)
 
 def menu_cine(cine):
 
@@ -40,6 +44,7 @@ def menu_cine(cine):
         titulo = input("Titulo: ")
         duracion = input("Duración: ")
         genero = input("Género: ")
+        cine.agregar_pelicula()
         db.agregar_pelicula(titulo, duracion, genero)
 
     elif opcion == "2":
