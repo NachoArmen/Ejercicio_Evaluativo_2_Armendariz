@@ -44,7 +44,7 @@ def menu_cine(cine):
         titulo = input("Titulo: ")
         duracion = input("Duración: ")
         genero = input("Género: ")
-        cine.agregar_pelicula()
+        #cine.agregar_pelicula()#debes agregar parametro pelicula, creas un objeto de tipo Pelicula
         db.agregar_pelicula(titulo, duracion, genero)
 
     elif opcion == "2":
@@ -59,7 +59,9 @@ def menu_cine(cine):
         db.modificar_pelicula(titulo, duracion, genero, id)
 
     elif opcion == "4":
-        cine.mostrar_programacion(cine_elegido)
+        c1.mostrar_programacion()
+        #cine.mostrar_programacion(cine_elegido) de momento sacamos el parametro pq no estamos guardando el cine
+
 
     elif opcion == "5":
         break
