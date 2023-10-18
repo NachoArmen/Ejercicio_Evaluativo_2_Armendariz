@@ -31,6 +31,8 @@ class Conexion:
     def lista_peliculas(self):
         self.cursor.execute('''SELECT * FROM peliculas''')
         peliculas= self.cursor.fetchall()
+        #debes retornar las peliculas
+        return peliculas
 
 
 

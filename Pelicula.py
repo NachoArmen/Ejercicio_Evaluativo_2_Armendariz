@@ -4,6 +4,7 @@ class Pelicula:
         self.duracion = duracion
         self.genero = genero
 
+
     def mostrar_info(self):
         print(f"Título: {self.titulo}")
         print(f"Duración: {self.duracion}")
